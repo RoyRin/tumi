@@ -1,7 +1,7 @@
 'use client';
 
-import TumiHeader from '@/components/TumiHeader';
-import TumiFooter from '@/components/TumiFooter';
+import { TumiHeader } from "@/components/tumi-header"
+import { TumiFooter } from "@/components/tumi-footer"
 import Link from 'next/link';
 
 export default function PrivacyPage() {
