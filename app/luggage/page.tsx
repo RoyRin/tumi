@@ -1,167 +1,215 @@
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ChevronDown } from "lucide-react"
 import Link from "next/link"
-import { Footer } from "@/components/footer"
-import { Header } from "@/components/header"
+import { TumiHeader } from "@/components/tumi-header"
+import { TumiFooter } from "@/components/tumi-footer"
+import { Filter, ChevronDown } from "lucide-react"
+
+const luggageProducts = [
+  {
+    id: 1,
+    name: "Alpha 3 International Expandable Carry-On",
+    slug: "alpha-3-international-carry-on",
+    collection: "Alpha 3",
+    price: 397,
+    originalPrice: 795,
+    discount: 50,
+    image: "/images/luggage-1.jpg",
+    isNew: false,
+    isBestSeller: true,
+  },
+  {
+    id: 2,
+    name: "19 Degree Aluminum Short Trip Packing Case",
+    slug: "19-degree-aluminum-short-trip",
+    collection: "19 Degree",
+    price: 647,
+    originalPrice: 1295,
+    discount: 50,
+    image: "/images/luggage-3.jpg",
+    isNew: false,
+    isBestSeller: false,
+  },
+  {
+    id: 3,
+    name: "Tegra-Lite Max Medium Trip Expandable Packing Case",
+    slug: "tegra-lite-max-medium-trip",
+    collection: "Tegra-Lite",
+    price: 447,
+    originalPrice: 895,
+    discount: 50,
+    image: "/images/luggage-4.jpg",
+    isNew: true,
+    isBestSeller: false,
+  },
+  {
+    id: 4,
+    name: "Voyageur Tres Leger International Carry-On",
+    slug: "voyageur-tres-leger-carry-on",
+    collection: "Voyageur",
+    price: 322,
+    originalPrice: 645,
+    discount: 50,
+    image: "/images/luggage-1.jpg",
+    isNew: false,
+    isBestSeller: true,
+  },
+  {
+    id: 5,
+    name: "Alpha 3 Extended Trip Expandable 4 Wheeled Packing Case",
+    slug: "alpha-3-extended-trip",
+    collection: "Alpha 3",
+    price: 497,
+    originalPrice: 995,
+    discount: 50,
+    image: "/images/luggage-3.jpg",
+    isNew: false,
+    isBestSeller: false,
+  },
+  {
+    id: 6,
+    name: "Merge Wheeled Duffel Packing Case",
+    slug: "merge-wheeled-duffel",
+    collection: "Merge",
+    price: 372,
+    originalPrice: 745,
+    discount: 50,
+    image: "/images/luggage-4.jpg",
+    isNew: true,
+    isBestSeller: false,
+  },
+]
 
 export default function LuggagePage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Breadcrumb */}
-        <nav className="flex mb-8">
-          <Link href="/" className="text-gray-500 hover:text-gray-700">
-            Home
-          </Link>
-          <span className="mx-2 text-gray-500">/</span>
-          <span className="text-gray-900">Luggage</span>
-        </nav>
+      <TumiHeader />
 
-        <div className="flex">
-          {/* Sidebar Filters */}
-          <div className="w-64 pr-8">
-            <div className="space-y-6">
-              <div>
-                <button className="flex items-center justify-between w-full text-left font-medium text-gray-900 mb-4">
-                  Construction Type
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                <div className="space-y-2">
-                  <label className="flex items-center">
-                    <input type="checkbox" className="mr-2" />
-                    <span className="text-sm text-gray-700">Hardsided (94)</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input type="checkbox" className="mr-2" />
-                    <span className="text-sm text-gray-700">Softsided (49)</span>
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <button className="flex items-center justify-between w-full text-left font-medium text-gray-900 mb-4">
-                  Luggage Size
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </div>
-
-              <div>
-                <button className="flex items-center justify-between w-full text-left font-medium text-gray-900 mb-4">
-                  Color
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </div>
-
-              <div>
-                <button className="flex items-center justify-between w-full text-left font-medium text-gray-900 mb-4">
-                  Material
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </div>
-
-              <div>
-                <button className="flex items-center justify-between w-full text-left font-medium text-gray-900 mb-4">
-                  Collection
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Content */}
-          <div className="flex-1">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Luggage</h1>
-              <div className="flex items-center space-x-4">
-                <Button variant="outline">Hide Filters</Button>
-                <select className="border border-gray-300 rounded-md px-3 py-2">
-                  <option>Sort by: Featured</option>
-                  <option>Price: Low to High</option>
-                  <option>Price: High to Low</option>
-                  <option>Best Sellers</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {luggageProducts.map((product, index) => (
-                <Link key={index} href={`/product/luggage-${index}`}>
-                  <div className="group cursor-pointer">
-                    <div className="relative bg-gray-50 rounded-lg overflow-hidden">
-                      {product.badge && (
-                        <Badge
-                          className={`absolute top-3 left-3 z-10 ${
-                            product.badge === "BESTSELLER"
-                              ? "bg-blue-600 hover:bg-blue-600"
-                              : "bg-red-600 hover:bg-red-600"
-                          } text-white`}
-                        >
-                          {product.badge}
-                        </Badge>
-                      )}
-                      <Image
-                        src={`/images/luggage-${(index % 4) + 1}.jpg`}
-                        alt={product.name}
-                        width={250}
-                        height={300}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="mt-4">
-                      <p className="text-xs text-gray-500 mb-1">{product.collection}</p>
-                      <h3 className="text-sm font-medium text-gray-900 mb-2">{product.name}</h3>
-                      <div className="flex items-center space-x-2 mb-2">
-                        {product.salePrice ? (
-                          <>
-                            <span className="text-lg font-bold text-red-600">${product.salePrice}</span>
-                            <span className="text-sm text-gray-500 line-through">${product.originalPrice}</span>
-                          </>
-                        ) : (
-                          <span className="text-lg font-bold text-gray-900">${product.originalPrice}</span>
-                        )}
-                      </div>
-                      <div className="flex space-x-1">
-                        {product.colors.map((color, colorIndex) => (
-                          <div key={colorIndex} className={`w-4 h-4 rounded-full border border-gray-300 ${color}`}></div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+      {/* Hero Section */}
+      <section className="relative h-[400px] overflow-hidden">
+        <Image
+          src="/images/luggage-hero.jpg"
+          alt="TUMI Luggage Collection"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-30" />
+        <div className="absolute inset-0 flex items-center justify-center text-white text-center">
+          <div>
+            <h1 className="text-5xl md:text-6xl font-light tracking-wider mb-4">LUGGAGE</h1>
+            <p className="text-xl tracking-wide">Travel in uncompromising style</p>
           </div>
         </div>
-        <Footer />
+      </section>
+
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-4 py-6">
+        <nav className="flex items-center space-x-2 text-sm text-gray-600">
+          <Link href="/" className="hover:text-black transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-black">Luggage</span>
+        </nav>
       </div>
+
+      {/* Filter Bar */}
+      <div className="container mx-auto px-4 pb-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+          <div className="flex items-center space-x-6">
+            <button className="flex items-center space-x-2 text-sm tracking-wider hover:text-gray-600 transition-colors">
+              <Filter className="w-4 h-4" />
+              <span>FILTER</span>
+            </button>
+            <span className="text-sm text-gray-600">{luggageProducts.length} Products</span>
+          </div>
+          
+          <div className="flex items-center space-x-4">
+            <span className="text-sm text-gray-600">Sort by:</span>
+            <button className="flex items-center space-x-2 text-sm tracking-wider border-b border-black pb-1">
+              <span>FEATURED</span>
+              <ChevronDown className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Product Grid */}
+      <section className="container mx-auto px-4 pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {luggageProducts.map((product) => (
+            <Link
+              key={product.id}
+              href={`/product/${product.slug}`}
+              className="group"
+            >
+              <div className="relative aspect-square bg-gray-50 rounded-lg overflow-hidden mb-4">
+                {product.discount && (
+                  <span className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 text-xs tracking-wider z-10">
+                    {product.discount}% OFF
+                  </span>
+                )}
+                {product.isNew && (
+                  <span className="absolute top-4 right-4 bg-black text-white px-3 py-1 text-xs tracking-wider z-10">
+                    NEW
+                  </span>
+                )}
+                {product.isBestSeller && (
+                  <span className="absolute top-14 left-4 bg-gray-800 text-white px-3 py-1 text-xs tracking-wider z-10">
+                    BEST SELLER
+                  </span>
+                )}
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <p className="text-xs text-gray-600 tracking-wider">{product.collection.toUpperCase()}</p>
+                <h3 className="text-sm font-light tracking-wide group-hover:text-gray-600 transition-colors">
+                  {product.name}
+                </h3>
+                <div className="flex items-center space-x-2">
+                  <span className="text-lg font-light text-red-600">${product.price}</span>
+                  {product.originalPrice && (
+                    <span className="text-sm text-gray-500 line-through">${product.originalPrice}</span>
+                  )}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Load More */}
+        <div className="text-center mt-12">
+          <button className="border border-black px-8 py-3 text-sm tracking-wider hover:bg-black hover:text-white transition-colors">
+            LOAD MORE
+          </button>
+        </div>
+      </section>
+
+      {/* Information Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-light tracking-wider mb-6">TRAVEL WITH CONFIDENCE</h2>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              Our luggage collection combines innovative design with uncompromising quality. 
+              From lightweight carry-ons to durable checked luggage, each piece is crafted 
+              to withstand the rigors of modern travel while maintaining sophisticated style.
+            </p>
+            <Link
+              href="/luggage-guide"
+              className="inline-block bg-black text-white px-8 py-3 text-sm tracking-wider hover:bg-gray-800 transition-colors"
+            >
+              LUGGAGE BUYING GUIDE
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <TumiFooter />
     </div>
   )
 }
-
-const luggageProducts = [
-  {
-    name: "International Expandable 4 Wheeled Carry-On",
-    collection: "ALPHA",
-    originalPrice: 895,
-    badge: null,
-    colors: ["bg-black", "bg-gray-600", "bg-blue-900"],
-  },
-  {
-    name: "Continental Dual Access 4 Wheeled Carry-On",
-    collection: "ALPHA",
-    originalPrice: 1050,
-    badge: "BESTSELLER",
-    colors: ["bg-black", "bg-gray-600", "bg-blue-900", "bg-brown-600"],
-  },
-  {
-    name: "Continental Dual Access 4 Wheeled Carry-On",
-    collection: "ALPHA",
-    originalPrice: 1095,
-    salePrice: 765,
-    badge: "30% OFF",
-    colors: ["bg-black", "bg-gray-600", "bg-blue-900", "bg-brown-600"],
-  },
-]
