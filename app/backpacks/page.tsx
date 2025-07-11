@@ -8,14 +8,14 @@ const backpackProducts = [
   {
     id: 1,
     name: "Alpha Bravo Sheppard Deluxe Brief Pack",
-    slug: "alpha-bravo-sheppard-deluxe-brief-pack",
+    slug: "alpha-bravo-sheppard-brief-pack",
     collection: "Alpha Bravo",
-    price: 247,
-    originalPrice: 495,
+    price: 272,
+    originalPrice: 545,
     discount: 50,
-    image: "/images/backpack-1.jpg",
-    isNew: false,
-    isBestSeller: true,
+    image: "/images/backpack-3.jpg",
+    isNew: true,
+    isBestSeller: false,
   },
   {
     id: 2,
@@ -25,55 +25,55 @@ const backpackProducts = [
     price: 197,
     originalPrice: 395,
     discount: 50,
-    image: "/images/backpack-2.jpg",
-    isNew: false,
-    isBestSeller: false,
-  },
-  {
-    id: 3,
-    name: "Alpha Bravo Knox Backpack",
-    slug: "alpha-bravo-knox-backpack",
-    collection: "Alpha Bravo",
-    price: 197,
-    originalPrice: 395,
-    discount: 50,
-    image: "/images/backpack-3.jpg",
-    isNew: true,
-    isBestSeller: false,
-  },
-  {
-    id: 4,
-    name: "Merge Wheeled Backpack",
-    slug: "merge-wheeled-backpack",
-    collection: "Merge",
-    price: 297,
-    originalPrice: 595,
-    discount: 50,
-    image: "/images/backpack-4.jpg",
+    image: "/images/backpack-1.jpg",
     isNew: false,
     isBestSeller: true,
   },
   {
-    id: 5,
-    name: "Alpha Bravo Search Backpack",
-    slug: "alpha-bravo-search-backpack",
+    id: 3,
+    name: "Alpha Bravo Navigation Backpack",
+    slug: "alpha-bravo-navigation-backpack",
     collection: "Alpha Bravo",
-    price: 272,
-    originalPrice: 545,
+    price: 247,
+    originalPrice: 495,
     discount: 50,
-    image: "/images/backpack-1.jpg",
-    isNew: true,
+    image: "/images/backpack-2.jpg",
+    isNew: false,
+    isBestSeller: false,
+  },
+  {
+    id: 4,
+    name: "Merge Brief Pack",
+    slug: "merge-brief-pack",
+    collection: "Merge",
+    price: 197,
+    originalPrice: 395,
+    discount: 50,
+    image: "/images/new-3.jpg",
+    isNew: false,
+    isBestSeller: false,
+  },
+  {
+    id: 5,
+    name: "Voyageur Celina Backpack",
+    slug: "voyageur-celina-backpack",
+    collection: "Voyageur",
+    price: 222,
+    originalPrice: 445,
+    discount: 50,
+    image: "/images/backpack-4.jpg",
+    isNew: false,
     isBestSeller: false,
   },
   {
     id: 6,
-    name: "Voyageur Hilden Backpack",
-    slug: "voyageur-hilden-backpack",
-    collection: "Voyageur",
-    price: 172,
-    originalPrice: 345,
+    name: "Alpha Bravo Navigation Backpack",
+    slug: "alpha-bravo-navigation-backpack",
+    collection: "Alpha Bravo",
+    price: 247,
+    originalPrice: 495,
     discount: 50,
-    image: "/images/backpack-2.jpg",
+    image: "/images/new-6.jpg",
     isNew: false,
     isBestSeller: false,
   },
@@ -97,7 +97,7 @@ export default function BackpacksPage() {
         <div className="absolute inset-0 flex items-center justify-center text-white text-center">
           <div>
             <h1 className="text-5xl md:text-6xl font-light tracking-wider mb-4">BACKPACKS</h1>
-            <p className="text-xl tracking-wide">Engineered for the modern journey</p>
+            <p className="text-xl tracking-wide">Where form meets function</p>
           </div>
         </div>
       </section>
@@ -193,18 +193,32 @@ export default function BackpacksPage() {
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-light tracking-wider mb-6">CARRY WITH PURPOSE</h2>
+            <h2 className="text-3xl font-light tracking-wider mb-6">DESIGNED FOR YOUR JOURNEY</h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our backpack collection seamlessly blends innovation and style. From sleek business 
-              backpacks to versatile travel companions, each piece is designed to protect your 
-              essentials while complementing your professional lifestyle.
+              Our backpack collection combines innovative features with refined style. From business 
+              backpacks with dedicated laptop compartments to versatile travel packs with smart 
+              organization, each design is crafted to enhance your daily carry experience.
             </p>
-            <Link
-              href="/backpack-guide"
-              className="inline-block bg-black text-white px-8 py-3 text-sm tracking-wider hover:bg-gray-800 transition-colors"
-            >
-              BACKPACK BUYING GUIDE
-            </Link>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <h3 className="text-lg font-light tracking-wider mb-2">DURABILITY</h3>
+                <p className="text-sm text-gray-600">
+                  Built with premium materials like ballistic nylon and reinforced stitching
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-light tracking-wider mb-2">COMFORT</h3>
+                <p className="text-sm text-gray-600">
+                  Ergonomic designs with padded straps and back panels for all-day wear
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-light tracking-wider mb-2">ORGANIZATION</h3>
+                <p className="text-sm text-gray-600">
+                  Thoughtful compartments and pockets to keep your essentials accessible
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

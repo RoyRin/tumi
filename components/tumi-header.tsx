@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react"
 import { useState } from "react"
 
@@ -29,7 +30,13 @@ export function TumiHeader() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-light tracking-[0.25em] text-gray-900">TUMI</span>
+              <Image
+                src="/tumi.webp"
+                alt="TUMI"
+                width={120}
+                height={40}
+                className="h-8 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}

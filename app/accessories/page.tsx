@@ -8,22 +8,22 @@ const accessoryProducts = [
   {
     id: 1,
     name: "3-in-1 Foldable Magnetic Wireless Charger",
-    slug: "3-in-1-foldable-magnetic-wireless-charger",
+    slug: "3-in-1-wireless-charger",
     collection: "Electronics",
     price: 97,
     originalPrice: 195,
     discount: 50,
     image: "/images/accessory-1.jpg",
-    isNew: true,
+    isNew: false,
     isBestSeller: true,
   },
   {
     id: 2,
-    name: "Packing Cube Set",
-    slug: "packing-cube-set",
-    collection: "Travel",
-    price: 47,
-    originalPrice: 95,
+    name: "Tyler Crossbody",
+    slug: "tyler-crossbody",
+    collection: "Wallets",
+    price: 147,
+    originalPrice: 295,
     discount: 50,
     image: "/images/accessory-2.jpg",
     isNew: false,
@@ -31,73 +31,73 @@ const accessoryProducts = [
   },
   {
     id: 3,
-    name: "Travel Wallet",
-    slug: "travel-wallet",
+    name: "Nassau SLG Wallet",
+    slug: "nassau-slg-wallet",
     collection: "Wallets",
-    price: 62,
-    originalPrice: 125,
+    price: 97,
+    originalPrice: 195,
     discount: 50,
     image: "/images/accessory-3.jpg",
     isNew: false,
-    isBestSeller: true,
+    isBestSeller: false,
   },
   {
     id: 4,
-    name: "Luggage Tag Set",
-    slug: "luggage-tag-set",
-    collection: "Travel",
-    price: 22,
-    originalPrice: 45,
+    name: "Universal Travel Adapter",
+    slug: "travel-adapter",
+    collection: "Electronics",
+    price: 47,
+    originalPrice: 95,
     discount: 50,
     image: "/images/accessory-4.jpg",
-    isNew: false,
+    isNew: true,
     isBestSeller: false,
   },
   {
     id: 5,
-    name: "Tech Portfolio Organizer",
-    slug: "tech-portfolio-organizer",
-    collection: "Electronics",
-    price: 72,
-    originalPrice: 145,
-    discount: 50,
-    image: "/images/accessory-1.jpg",
-    isNew: true,
-    isBestSeller: false,
-  },
-  {
-    id: 6,
-    name: "Leather Card Case",
-    slug: "leather-card-case",
-    collection: "Wallets",
+    name: "Memory Foam Travel Neck Pillow",
+    slug: "travel-neck-pillow",
+    collection: "Travel",
     price: 47,
     originalPrice: 95,
     discount: 50,
-    image: "/images/accessory-3.jpg",
+    image: "/images/new-5.jpg",
+    isNew: false,
+    isBestSeller: true,
+  },
+  {
+    id: 6,
+    name: "3-in-1 Foldable Magnetic Wireless Charger",
+    slug: "3-in-1-wireless-charger",
+    collection: "Electronics",
+    price: 97,
+    originalPrice: 195,
+    discount: 50,
+    image: "/images/new-1.jpg",
+    isNew: false,
+    isBestSeller: true,
+  },
+  {
+    id: 7,
+    name: "Tyler Crossbody",
+    slug: "tyler-crossbody",
+    collection: "Wallets",
+    price: 147,
+    originalPrice: 295,
+    discount: 50,
+    image: "/images/new-2.jpg",
     isNew: false,
     isBestSeller: false,
   },
   {
-    id: 7,
-    name: "Travel Adapter Kit",
-    slug: "travel-adapter-kit",
-    collection: "Electronics",
-    price: 122,
-    originalPrice: 245,
-    discount: 50,
-    image: "/images/accessory-1.jpg",
-    isNew: true,
-    isBestSeller: true,
-  },
-  {
     id: 8,
-    name: "Garment Sleeve",
-    slug: "garment-sleeve",
-    collection: "Travel",
-    price: 87,
-    originalPrice: 175,
+    name: "Nassau SLG Wallet",
+    slug: "nassau-slg-wallet",
+    collection: "Wallets",
+    price: 97,
+    originalPrice: 195,
     discount: 50,
-    image: "/images/accessory-2.jpg",
+    image: "/images/accessory-3.jpg",
     isNew: false,
     isBestSeller: false,
   },
@@ -121,7 +121,7 @@ export default function AccessoriesPage() {
         <div className="absolute inset-0 flex items-center justify-center text-white text-center">
           <div>
             <h1 className="text-5xl md:text-6xl font-light tracking-wider mb-4">ACCESSORIES</h1>
-            <p className="text-xl tracking-wide">Essential details for the discerning traveler</p>
+            <p className="text-xl tracking-wide">Essential travel companions</p>
           </div>
         </div>
       </section>
@@ -158,7 +158,7 @@ export default function AccessoriesPage() {
 
       {/* Product Grid */}
       <section className="container mx-auto px-4 pb-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {accessoryProducts.map((product) => (
             <Link
               key={product.id}
@@ -213,22 +213,38 @@ export default function AccessoriesPage() {
         </div>
       </section>
 
-      {/* Information Section */}
+      {/* Categories Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-light tracking-wider mb-6">COMPLETE YOUR JOURNEY</h2>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              Thoughtfully designed accessories that enhance your travel experience. From innovative 
-              tech organizers to sophisticated wallets and travel essentials, each piece is crafted 
-              to complement your TUMI collection and simplify life on the go.
-            </p>
-            <Link
-              href="/accessory-guide"
-              className="inline-block bg-black text-white px-8 py-3 text-sm tracking-wider hover:bg-gray-800 transition-colors"
-            >
-              EXPLORE ALL ACCESSORIES
-            </Link>
+          <h2 className="text-3xl font-light tracking-wider text-center mb-12">SHOP BY CATEGORY</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="bg-white p-8 mb-4">
+                <h3 className="text-lg font-light tracking-wider">ELECTRONICS</h3>
+              </div>
+              <p className="text-sm text-gray-600">
+                Chargers, adapters, and tech organizers for the modern traveler
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-white p-8 mb-4">
+                <h3 className="text-lg font-light tracking-wider">WALLETS</h3>
+              </div>
+              <p className="text-sm text-gray-600">
+                Premium leather wallets and card cases with RFID protection
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-white p-8 mb-4">
+                <h3 className="text-lg font-light tracking-wider">TRAVEL</h3>
+              </div>
+              <p className="text-sm text-gray-600">
+                Essential accessories for comfortable and organized travel
+              </p>
+            </div>
           </div>
         </div>
       </section>

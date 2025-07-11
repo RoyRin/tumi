@@ -7,8 +7,8 @@ import { Filter, ChevronDown } from "lucide-react"
 const newProducts = [
   {
     id: 1,
-    name: "Alpha 3 Expandable Organizer Laptop Brief",
-    slug: "alpha-3-expandable-organizer-laptop-brief-new",
+    name: "Alpha 3 Organizer Brief",
+    slug: "alpha-3-organizer-brief",
     collection: "Alpha 3",
     price: 595,
     originalPrice: null,
@@ -21,7 +21,7 @@ const newProducts = [
   {
     id: 2,
     name: "Merge Wheeled Duffel Packing Case",
-    slug: "merge-wheeled-duffel-packing-case-new",
+    slug: "merge-wheeled-duffel",
     collection: "Merge",
     price: 795,
     originalPrice: null,
@@ -34,7 +34,7 @@ const newProducts = [
   {
     id: 3,
     name: "Voyageur Carson Backpack",
-    slug: "voyageur-carson-backpack-new",
+    slug: "voyageur-carson-backpack",
     collection: "Voyageur",
     price: 395,
     originalPrice: null,
@@ -47,7 +47,7 @@ const newProducts = [
   {
     id: 4,
     name: "Alpha Bravo Sheppard Deluxe Brief Pack",
-    slug: "alpha-bravo-sheppard-deluxe-brief-pack-new",
+    slug: "alpha-bravo-sheppard-brief-pack",
     collection: "Alpha Bravo",
     price: 495,
     originalPrice: null,
@@ -59,8 +59,8 @@ const newProducts = [
   },
   {
     id: 5,
-    name: "Tegra-Lite Max International Expandable Carry-On",
-    slug: "tegra-lite-max-international-expandable-carry-on-new",
+    name: "Tegra-Lite Max Medium Trip Expandable Packing Case",
+    slug: "tegra-lite-max-medium-trip",
     collection: "Tegra-Lite",
     price: 695,
     originalPrice: null,
@@ -72,8 +72,8 @@ const newProducts = [
   },
   {
     id: 6,
-    name: "19 Degree Aluminum International Carry-On",
-    slug: "19-degree-aluminum-international-carry-on-new",
+    name: "19 Degree Aluminum Short Trip Packing Case",
+    slug: "19-degree-aluminum-short-trip",
     collection: "19 Degree",
     price: 1295,
     originalPrice: null,
@@ -85,8 +85,8 @@ const newProducts = [
   },
   {
     id: 7,
-    name: "Harrison Warren Backpack",
-    slug: "harrison-warren-backpack-new",
+    name: "Harrison Bradner Briefcase",
+    slug: "harrison-bradner-briefcase",
     collection: "Harrison",
     price: 525,
     originalPrice: null,
@@ -98,8 +98,8 @@ const newProducts = [
   },
   {
     id: 8,
-    name: "Tech Accessories Pouch Trio",
-    slug: "tech-accessories-pouch-trio-new",
+    name: "3-in-1 Foldable Magnetic Wireless Charger",
+    slug: "3-in-1-wireless-charger",
     collection: "Accessories",
     price: 165,
     originalPrice: null,
