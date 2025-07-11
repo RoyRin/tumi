@@ -87,7 +87,7 @@ export default function BagsPage() {
       {/* Hero Section */}
       <section className="relative h-[400px] overflow-hidden">
         <Image
-          src="/images/bag-hero.jpg"
+          src="/images/bag-hero.svg"
           alt="TUMI Bag Collection"
           fill
           className="object-cover"

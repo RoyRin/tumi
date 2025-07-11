@@ -119,7 +119,7 @@ export default function WhatsNewPage() {
       {/* Hero Section */}
       <section className="relative h-[400px] overflow-hidden">
         <Image
-          src="/images/whats-new-hero.jpg"
+          src="/images/whats-new-hero.svg"
           alt="TUMI New Arrivals"
           fill
           className="object-cover"

@@ -13,7 +13,7 @@ const accessoryProducts = [
     price: 97,
     originalPrice: 195,
     discount: 50,
-    image: "/images/accessory-1.jpg",
+    image: "/images/wireless-charger.svg",
     isNew: false,
     isBestSeller: true,
   },
@@ -25,7 +25,7 @@ const accessoryProducts = [
     price: 147,
     originalPrice: 295,
     discount: 50,
-    image: "/images/accessory-2.jpg",
+    image: "/images/tyler-crossbody.svg",
     isNew: false,
     isBestSeller: false,
   },
@@ -37,7 +37,7 @@ const accessoryProducts = [
     price: 97,
     originalPrice: 195,
     discount: 50,
-    image: "/images/accessory-3.jpg",
+    image: "/images/nassau-wallet.svg",
     isNew: false,
     isBestSeller: false,
   },
@@ -49,7 +49,7 @@ const accessoryProducts = [
     price: 47,
     originalPrice: 95,
     discount: 50,
-    image: "/images/accessory-4.jpg",
+    image: "/images/travel-adapter.svg",
     isNew: true,
     isBestSeller: false,
   },
@@ -61,7 +61,7 @@ const accessoryProducts = [
     price: 65,
     originalPrice: 125,
     discount: 48,
-    image: "/images/bag-4.jpg",
+    image: "/images/card-case.svg",
     isNew: false,
     isBestSeller: false,
   },
@@ -73,7 +73,7 @@ const accessoryProducts = [
     price: 45,
     originalPrice: 85,
     discount: 47,
-    image: "/images/new-1.jpg",
+    image: "/images/luggage-tag-set.svg",
     isNew: false,
     isBestSeller: false,
   },
@@ -85,7 +85,7 @@ const accessoryProducts = [
     price: 75,
     originalPrice: 145,
     discount: 48,
-    image: "/images/new-4.jpg",
+    image: "/images/tech-pouch.svg",
     isNew: true,
     isBestSeller: true,
   },
@@ -97,7 +97,7 @@ const accessoryProducts = [
     price: 55,
     originalPrice: 105,
     discount: 48,
-    image: "/images/new-6.jpg",
+    image: "/images/passport-cover.svg",
     isNew: false,
     isBestSeller: false,
   },
@@ -111,7 +111,7 @@ export default function AccessoriesPage() {
       {/* Hero Section */}
       <section className="relative h-[400px] overflow-hidden">
         <Image
-          src="/images/accessory-hero.jpg"
+          src="/images/accessory-hero.svg"
           alt="TUMI Accessories Collection"
           fill
           className="object-cover"

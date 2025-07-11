@@ -87,7 +87,7 @@ export default function BackpacksPage() {
       {/* Hero Section */}
       <section className="relative h-[400px] overflow-hidden">
         <Image
-          src="/images/backpack-hero.jpg"
+          src="/images/backpack-hero.svg"
           alt="TUMI Backpack Collection"
           fill
           className="object-cover"
