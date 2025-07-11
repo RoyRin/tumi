@@ -309,6 +309,33 @@ export const products: Record<string, Product> = {
     description: "Modern brief pack designed for the contemporary professional.",
     isNew: false
   },
+  "alpha-3-flap-backpack": {
+    id: "alpha-3-flap-backpack",
+    slug: "alpha-3-flap-backpack",
+    name: "Alpha 3 Flap Backpack",
+    collection: "Alpha 3",
+    category: "Backpacks",
+    price: 347,
+    originalPrice: 695,
+    discount: 50,
+    images: ["/images/new-6.jpg"],
+    colors: ["Black", "Navy", "Anthracite"],
+    features: [
+      "Flap closure with magnetic snap",
+      "Fits up to 15\" laptop",
+      "Ballistic nylon construction",
+      "Multiple interior pockets",
+      "Padded laptop compartment",
+      "Leather trim details",
+      "Water-resistant coating"
+    ],
+    dimensions: "17.5\" x 12\" x 6.5\"",
+    weight: "3.3 lbs",
+    warranty: "5 Year Limited Warranty",
+    sku: "0117392D3",
+    description: "Premium flap backpack combining sophisticated style with Alpha 3's legendary durability.",
+    isNew: true
+  },
 
   // Bags Products
   "harrison-bradner-briefcase": {
