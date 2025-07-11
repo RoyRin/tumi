@@ -58,15 +58,25 @@ export default function AboutPage() {
                   strength, quality, and heritage.
                 </p>
               </div>
-              <div className="bg-gray-100 h-96 flex items-center justify-center">
-                <p className="text-gray-500">Heritage Image</p>
+              <div className="relative h-96 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/lifestyle-1.jpg"
+                  alt="TUMI Heritage"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
             {/* Innovation */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="bg-gray-100 h-96 flex items-center justify-center order-2 md:order-1">
-                <p className="text-gray-500">Innovation Image</p>
+              <div className="relative h-96 rounded-lg overflow-hidden order-2 md:order-1">
+                <Image
+                  src="/images/lifestyle-2.jpg"
+                  alt="TUMI Innovation"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="text-3xl font-light mb-6">Innovation & Craftsmanship</h2>
