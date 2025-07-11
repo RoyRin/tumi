@@ -30,13 +30,7 @@ export function TumiHeader() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <Image
-                src="/tumi.webp"
-                alt="TUMI"
-                width={120}
-                height={40}
-                className="h-8 w-auto"
-              />
+              <span className="text-2xl font-light tracking-[0.3em]">TUMI</span>
             </Link>
 
             {/* Desktop Navigation */}
