@@ -122,7 +122,7 @@ const saleProducts = [
     price: 372,
     originalPrice: 745,
     discount: 50,
-    image: "/images/luggage-1.jpg",
+    image: "/images/new-2.jpg",
     isBestSeller: false,
   },
   {
